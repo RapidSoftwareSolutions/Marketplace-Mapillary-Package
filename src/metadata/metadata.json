@@ -1,0 +1,521 @@
+{
+  "package": "Mapillary",
+  "tagline": "Mapillary API",
+  "description": "Mapillary",
+  "image": "http:\/\/logo.clearbit.com\/mapillary.com",
+  "repo": "https:\/\/github.com\/RapidSoftwareSolutions\/Marketplace-Mapillary-Package",
+  "keywords": [
+  ],
+  "accounts": {
+    "domain": "mapillary.com",
+    "credentials": [
+      "clientId"
+    ]
+  },
+  "blocks": [
+    {
+      "name": "searchImages",
+      "description": "Search images",
+      "args": [
+        {
+          "name": "clientId",
+          "type": "credentials",
+          "info": "Client Id obtained from Mapillary",
+          "required": true
+        },
+        {
+          "name": "closeToLongitude",
+          "type": "String",
+          "info": "Longitude for the filter by a location that images are close to",
+          "required": false
+        },
+        {
+          "name": "closeToLatitude",
+          "type": "String",
+          "info": "Latitude for the filter by a location that images are close to",
+          "required": false
+        },
+        {
+          "name": "lookAtLongitude",
+          "type": "String",
+          "info": "Longitude for the filter by a location that images are taken in the direction of the specified point (and therefore that point is likely to be visible in the images)",
+          "required": false
+        },
+        {
+          "name": "lookAtLatitude",
+          "type": "String",
+          "info": "Latitude for the filter by a location that images are taken in the direction of the specified point (and therefore that point is likely to be visible in the images)",
+          "required": false
+        },
+        {
+          "name": "minBoundingBoxX",
+          "type": "String",
+          "info": "Minimal X for filter by the bounding box",
+          "required": false
+        },
+        {
+          "name": "minBoundingBoxY",
+          "type": "String",
+          "info": "Minimal Y for filter by the bounding box",
+          "required": false
+        },
+        {
+          "name": "maxBoundingBoxX",
+          "type": "String",
+          "info": "Maximal X for filter by the bounding box",
+          "required": false
+        },
+        {
+          "name": "minBoundingBoxY",
+          "type": "String",
+          "info": "Maximal Y for filter by the bounding box",
+          "required": false
+        },
+        {
+          "name": "radius",
+          "type": "String",
+          "info": "Filter images within the radius around the  closeTo location (default  100 meters).",
+          "required": false
+        },
+        {
+          "name": "userKeys",
+          "type": "String",
+          "info": "Filter images captured by users.",
+          "required": false
+        }
+      ],
+      "callbacks": [
+        {
+          "name": "error",
+          "info": "error"
+        }
+      ]
+    },
+    {
+      "name": "getSingleImage",
+      "description": "Given an imageId, retrieve the image object.",
+      "args": [
+        {
+          "name": "clientId",
+          "type": "credentials",
+          "info": "Client Id obtained from Mapillary",
+          "required": true
+        },
+        {
+          "name": "imageId",
+          "type": "String",
+          "info": "ID of the image",
+          "required": false
+        }
+      ],
+      "callbacks": [
+        {
+          "name": "error",
+          "info": "error"
+        }
+      ]
+    },
+    {
+      "name": "getSingleImageDetections",
+      "description": "Given an imageId, retrieve the image object detections.",
+      "args": [
+        {
+          "name": "clientId",
+          "type": "credentials",
+          "info": "Client Id obtained from Mapillary",
+          "required": true
+        },
+        {
+          "name": "imageId",
+          "type": "String",
+          "info": "ID of the image",
+          "required": false
+        }
+      ],
+      "callbacks": [
+        {
+          "name": "error",
+          "info": "error"
+        }
+      ]
+    },
+    {
+      "name": "searchSequences",
+      "description": "Search sequences",
+      "args": [
+        {
+          "name": "clientId",
+          "type": "credentials",
+          "info": "Client Id obtained from Mapillary",
+          "required": true
+        },
+        {
+          "name": "minBoundingBoxX",
+          "type": "String",
+          "info": "Minimal X for filter by the bounding box",
+          "required": false
+        },
+        {
+          "name": "minBoundingBoxY",
+          "type": "String",
+          "info": "Minimal Y for filter by the bounding box",
+          "required": false
+        },
+        {
+          "name": "maxBoundingBoxX",
+          "type": "String",
+          "info": "Maximal X for filter by the bounding box",
+          "required": false
+        },
+        {
+          "name": "minBoundingBoxY",
+          "type": "String",
+          "info": "Maximal Y for filter by the bounding box",
+          "required": false
+        },
+        {
+          "name": "userKeys",
+          "type": "String",
+          "info": "Filter images captured by users.",
+          "required": false
+        }
+      ],
+      "callbacks": [
+        {
+          "name": "error",
+          "info": "error"
+        }
+      ]
+    },
+    {
+      "name": "getSingleSequence",
+      "description": "Given an sequenceId, retrieve the sequence object.",
+      "args": [
+        {
+          "name": "clientId",
+          "type": "credentials",
+          "info": "Client Id obtained from Mapillary",
+          "required": true
+        },
+        {
+          "name": "sequenceId",
+          "type": "String",
+          "info": "ID of the sequence",
+          "required": false
+        }
+      ],
+      "callbacks": [
+        {
+          "name": "error",
+          "info": "error"
+        }
+      ]
+    },
+    {
+      "name": "searchChangesets",
+      "description": "Search changesets",
+      "args": [
+        {
+          "name": "clientId",
+          "type": "credentials",
+          "info": "Client Id obtained from Mapillary",
+          "required": true
+        },
+        {
+          "name": "minBoundingBoxX",
+          "type": "String",
+          "info": "Minimal X for filter by the bounding box",
+          "required": false
+        },
+        {
+          "name": "minBoundingBoxY",
+          "type": "String",
+          "info": "Minimal Y for filter by the bounding box",
+          "required": false
+        },
+        {
+          "name": "maxBoundingBoxX",
+          "type": "String",
+          "info": "Maximal X for filter by the bounding box",
+          "required": false
+        },
+        {
+          "name": "minBoundingBoxY",
+          "type": "String",
+          "info": "Maximal Y for filter by the bounding box",
+          "required": false
+        },
+        {
+          "name": "userKeys",
+          "type": "String",
+          "info": "Filter images captured by users.",
+          "required": false
+        },
+        {
+          "name": "states",
+          "type": "String",
+          "info": "Changeset state. Possible values: pending, approved, rejected",
+          "required": false
+        },
+        {
+          "name": "types",
+          "type": "String",
+          "info": "Changeset types. Possible values: location, deletion",
+          "required": false
+        }
+      ],
+      "callbacks": [
+        {
+          "name": "error",
+          "info": "error"
+        }
+      ]
+    },
+    {
+      "name": "getSingleChangeset",
+      "description": "Given a changesetId, retrieve the changeset object.",
+      "args": [
+        {
+          "name": "clientId",
+          "type": "credentials",
+          "info": "Client Id obtained from Mapillary",
+          "required": true
+        },
+        {
+          "name": "changesetId",
+          "type": "String",
+          "info": "ID of the changeset",
+          "required": false
+        }
+      ],
+      "callbacks": [
+        {
+          "name": "error",
+          "info": "error"
+        }
+      ]
+    },
+    {
+      "name": "searchMaps",
+      "description": "Search maps objects",
+      "args": [
+        {
+          "name": "clientId",
+          "type": "credentials",
+          "info": "Client Id obtained from Mapillary",
+          "required": true
+        },
+        {
+          "name": "minBoundingBoxX",
+          "type": "String",
+          "info": "Minimal X for filter by the bounding box",
+          "required": false
+        },
+        {
+          "name": "minBoundingBoxY",
+          "type": "String",
+          "info": "Minimal Y for filter by the bounding box",
+          "required": false
+        },
+        {
+          "name": "maxBoundingBoxX",
+          "type": "String",
+          "info": "Maximal X for filter by the bounding box",
+          "required": false
+        },
+        {
+          "name": "minBoundingBoxY",
+          "type": "String",
+          "info": "Maximal Y for filter by the bounding box",
+          "required": false
+        }
+      ],
+      "callbacks": [
+        {
+          "name": "error",
+          "info": "error"
+        }
+      ]
+    },
+    {
+      "name": "getSingleMap",
+      "description": "Given an mapId, retrieve the map object.",
+      "args": [
+        {
+          "name": "clientId",
+          "type": "credentials",
+          "info": "Client Id obtained from Mapillary",
+          "required": true
+        },
+        {
+          "name": "mapId",
+          "type": "String",
+          "info": "ID of the map",
+          "required": false
+        }
+      ],
+      "callbacks": [
+        {
+          "name": "error",
+          "info": "error"
+        }
+      ]
+    },
+    {
+      "name": "searchDetections",
+      "description": "Search detection objects",
+      "args": [
+        {
+          "name": "clientId",
+          "type": "credentials",
+          "info": "Client Id obtained from Mapillary",
+          "required": true
+        },
+        {
+          "name": "minBoundingBoxX",
+          "type": "String",
+          "info": "Minimal X for filter by the bounding box",
+          "required": false
+        },
+        {
+          "name": "minBoundingBoxY",
+          "type": "String",
+          "info": "Minimal Y for filter by the bounding box",
+          "required": false
+        },
+        {
+          "name": "maxBoundingBoxX",
+          "type": "String",
+          "info": "Maximal X for filter by the bounding box",
+          "required": false
+        },
+        {
+          "name": "minBoundingBoxY",
+          "type": "String",
+          "info": "Maximal Y for filter by the bounding box",
+          "required": false
+        }
+      ],
+      "callbacks": [
+        {
+          "name": "error",
+          "info": "error"
+        }
+      ]
+    },
+    {
+      "name": "getSingleDetection",
+      "description": "Given a detectionId, retrieve the detection object.",
+      "args": [
+        {
+          "name": "clientId",
+          "type": "credentials",
+          "info": "Client Id obtained from Mapillary",
+          "required": true
+        },
+        {
+          "name": "detectionId",
+          "type": "String",
+          "info": "ID of the detection",
+          "required": false
+        }
+      ],
+      "callbacks": [
+        {
+          "name": "error",
+          "info": "error"
+        }
+      ]
+    },
+    {
+      "name": "searchUsers",
+      "description": "Search user objects",
+      "args": [
+        {
+          "name": "clientId",
+          "type": "credentials",
+          "info": "Client Id obtained from Mapillary",
+          "required": true
+        },
+        {
+          "name": "minBoundingBoxX",
+          "type": "String",
+          "info": "Minimal X for filter by the bounding box",
+          "required": false
+        },
+        {
+          "name": "minBoundingBoxY",
+          "type": "String",
+          "info": "Minimal Y for filter by the bounding box",
+          "required": false
+        },
+        {
+          "name": "maxBoundingBoxX",
+          "type": "String",
+          "info": "Maximal X for filter by the bounding box",
+          "required": false
+        },
+        {
+          "name": "minBoundingBoxY",
+          "type": "String",
+          "info": "Maximal Y for filter by the bounding box",
+          "required": false
+        }
+      ],
+      "callbacks": [
+        {
+          "name": "error",
+          "info": "error"
+        }
+      ]
+    },
+    {
+      "name": "getSingleUser",
+      "description": "Given an userId, retrieve the user object.",
+      "args": [
+        {
+          "name": "clientId",
+          "type": "credentials",
+          "info": "Client Id obtained from Mapillary",
+          "required": true
+        },
+        {
+          "name": "userId",
+          "type": "String",
+          "info": "Key of the user",
+          "required": false
+        }
+      ],
+      "callbacks": [
+        {
+          "name": "error",
+          "info": "error"
+        }
+      ]
+    },
+    {
+      "name": "getUserStatistics",
+      "description": "Given an userId, retrieve the user object statistics.",
+      "args": [
+        {
+          "name": "clientId",
+          "type": "credentials",
+          "info": "Client Id obtained from Mapillary",
+          "required": true
+        },
+        {
+          "name": "userId",
+          "type": "String",
+          "info": "Key of the user",
+          "required": false
+        }
+      ],
+      "callbacks": [
+        {
+          "name": "error",
+          "info": "error"
+        }
+      ]
+    }
+  ]
+}
