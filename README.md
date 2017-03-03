@@ -36,14 +36,6 @@ Given an imageId, retrieve the image object.
 | clientId| credentials| Client Id obtained from Mapillary
 | imageId | String     | ID of the image
 
-## Mapillary.getSingleImageDetections
-Given an imageId, retrieve the image object detections.
-
-| Field   | Type       | Description
-|---------|------------|----------
-| clientId| credentials| Client Id obtained from Mapillary
-| imageId | String     | ID of the image
-
 ## Mapillary.searchSequences
 Search sequences
 

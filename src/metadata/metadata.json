@@ -116,30 +116,6 @@
       ]
     },
     {
-      "name": "getSingleImageDetections",
-      "description": "Given an imageId, retrieve the image object detections.",
-      "args": [
-        {
-          "name": "clientId",
-          "type": "credentials",
-          "info": "Client Id obtained from Mapillary",
-          "required": true
-        },
-        {
-          "name": "imageId",
-          "type": "String",
-          "info": "ID of the image",
-          "required": true
-        }
-      ],
-      "callbacks": [
-        {
-          "name": "error",
-          "info": "error"
-        }
-      ]
-    },
-    {
       "name": "searchSequences",
       "description": "Search sequences",
       "args": [
