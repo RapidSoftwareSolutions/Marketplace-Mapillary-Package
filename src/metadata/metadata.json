@@ -105,7 +105,7 @@
           "name": "imageId",
           "type": "String",
           "info": "ID of the image",
-          "required": false
+          "required": true
         }
       ],
       "callbacks": [
