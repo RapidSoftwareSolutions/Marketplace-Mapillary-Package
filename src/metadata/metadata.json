@@ -201,7 +201,7 @@
           "name": "sequenceId",
           "type": "String",
           "info": "ID of the sequence",
-          "required": false
+          "required": true
         }
       ],
       "callbacks": [
@@ -285,7 +285,7 @@
           "name": "changesetId",
           "type": "String",
           "info": "ID of the changeset",
-          "required": false
+          "required": true
         }
       ],
       "callbacks": [
@@ -351,7 +351,7 @@
           "name": "mapId",
           "type": "String",
           "info": "ID of the map",
-          "required": false
+          "required": true
         }
       ],
       "callbacks": [
@@ -417,7 +417,7 @@
           "name": "detectionId",
           "type": "String",
           "info": "ID of the detection",
-          "required": false
+          "required": true
         }
       ],
       "callbacks": [
@@ -483,7 +483,7 @@
           "name": "userId",
           "type": "String",
           "info": "Key of the user",
-          "required": false
+          "required": true
         }
       ],
       "callbacks": [
@@ -507,7 +507,7 @@
           "name": "userId",
           "type": "String",
           "info": "Key of the user",
-          "required": false
+          "required": true
         }
       ],
       "callbacks": [
