@@ -18,19 +18,26 @@ $app->post('/api/Mapillary/searchImages', function ($request, $response, $args) 
         $body['closeto'] = $post_data['args']['closeToLongitude'] . ',' . $post_data['args']['closeToLatitude'];
     }
 
+    if (isset($post_data['args']['closeToCoordinates']) && strlen($post_data['args']['closeToCoordinates']) > 0) {
+        $body['closeto'] = $post_data['args']['closeToCoordinates'];
+    }
+
     if (isset($post_data['args']['lookAtLongitude']) && strlen($post_data['args']['lookAtLongitude']) > 0 && isset($post_data['args']['lookAtLatitude']) && strlen($post_data['args']['lookAtLatitude']) > 0) {
         $body['lookat'] = $post_data['args']['lookAtLongitude'] . ',' . $post_data['args']['lookAtLatitude'];
     }
-
-    if (isset($post_data['args']['minBoundingBoxX']) && strlen($post_data['args']['minBoundingBoxX'])> 0 && isset($post_data['args']['minBoundingBoxY']) && strlen($post_data['args']['minBoundingBoxY']) > 0 && isset($post_data['args']['maxBoundingBoxX']) && strlen($post_data['args']['maxBoundingBoxX']) > 0 && isset($post_data['args']['maxBoundingBoxY']) && strlen($post_data['args']['maxBoundingBoxY']) > 0){
-        $body['bbox'] = $post_data['args']['minBoundingBoxX'].','. $post_data['args']['minBoundingBoxY'].','.$post_data['args']['maxBoundingBoxX'].','.$post_data['args']['maxBoundingBoxY'];
+    if (isset($post_data['args']['lookAtCoordinates']) && strlen($post_data['args']['lookAtCoordinates']) > 0) {
+        $body['lookat'] = $post_data['args']['lookAtCoordinates'];
     }
 
-    if (isset($post_data['args']['radius']) && strlen($post_data['args']['radius']) > 0){
+    if (isset($post_data['args']['minBoundingBoxX']) && strlen($post_data['args']['minBoundingBoxX']) > 0 && isset($post_data['args']['minBoundingBoxY']) && strlen($post_data['args']['minBoundingBoxY']) > 0 && isset($post_data['args']['maxBoundingBoxX']) && strlen($post_data['args']['maxBoundingBoxX']) > 0 && isset($post_data['args']['maxBoundingBoxY']) && strlen($post_data['args']['maxBoundingBoxY']) > 0) {
+        $body['bbox'] = $post_data['args']['minBoundingBoxX'] . ',' . $post_data['args']['minBoundingBoxY'] . ',' . $post_data['args']['maxBoundingBoxX'] . ',' . $post_data['args']['maxBoundingBoxY'];
+    }
+
+    if (isset($post_data['args']['radius']) && strlen($post_data['args']['radius']) > 0) {
         $body['radius'] = $post_data['args']['radius'];
     }
 
-    if (isset($post_data['args']['userKeys']) && strlen($post_data['args']['userKeys']) > 0){
+    if (isset($post_data['args']['userKeys']) && strlen($post_data['args']['userKeys']) > 0) {
         $body['userkeys'] = $post_data['args']['userKeys'];
     }
 

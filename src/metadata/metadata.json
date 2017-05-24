@@ -24,27 +24,15 @@
           "required": true
         },
         {
-          "name": "closeToLongitude",
-          "type": "String",
-          "info": "Longitude for the filter by a location that images are close to",
+          "name": "closeToCoordinates",
+          "type": "Map",
+          "info": "Coma separated coordinates for the filter by a location that images are close to",
           "required": false
         },
         {
-          "name": "closeToLatitude",
-          "type": "String",
-          "info": "Latitude for the filter by a location that images are close to",
-          "required": false
-        },
-        {
-          "name": "lookAtLongitude",
-          "type": "String",
-          "info": "Longitude for the filter by a location that images are taken in the direction of the specified point (and therefore that point is likely to be visible in the images)",
-          "required": false
-        },
-        {
-          "name": "lookAtLatitude",
-          "type": "String",
-          "info": "Latitude for the filter by a location that images are taken in the direction of the specified point (and therefore that point is likely to be visible in the images)",
+          "name": "lookAtCoordinates",
+          "type": "Map",
+          "info": "Coma separated coordinates for the filter by a location that images are taken in the direction of the specified point (and therefore that point is likely to be visible in the images)",
           "required": false
         },
         {
@@ -84,13 +72,16 @@
           "required": false
         }
       ],
-     "callbacks": [{
-        "name": "error",
-        "info": "Error"
-      }, {
-        "name": "success",
-        "info": "Success"
-      }]
+      "callbacks": [
+        {
+          "name": "error",
+          "info": "Error"
+        },
+        {
+          "name": "success",
+          "info": "Success"
+        }
+      ]
     },
     {
       "name": "getSingleImage",
@@ -109,13 +100,16 @@
           "required": true
         }
       ],
-     "callbacks": [{
-        "name": "error",
-        "info": "Error"
-      }, {
-        "name": "success",
-        "info": "Success"
-      }]
+      "callbacks": [
+        {
+          "name": "error",
+          "info": "Error"
+        },
+        {
+          "name": "success",
+          "info": "Success"
+        }
+      ]
     },
     {
       "name": "searchSequences",
@@ -158,13 +152,16 @@
           "required": false
         }
       ],
-     "callbacks": [{
-        "name": "error",
-        "info": "Error"
-      }, {
-        "name": "success",
-        "info": "Success"
-      }]
+      "callbacks": [
+        {
+          "name": "error",
+          "info": "Error"
+        },
+        {
+          "name": "success",
+          "info": "Success"
+        }
+      ]
     },
     {
       "name": "getSingleSequence",
@@ -183,13 +180,16 @@
           "required": true
         }
       ],
-     "callbacks": [{
-        "name": "error",
-        "info": "Error"
-      }, {
-        "name": "success",
-        "info": "Success"
-      }]
+      "callbacks": [
+        {
+          "name": "error",
+          "info": "Error"
+        },
+        {
+          "name": "success",
+          "info": "Success"
+        }
+      ]
     },
     {
       "name": "searchChangesets",
@@ -244,13 +244,16 @@
           "required": false
         }
       ],
-     "callbacks": [{
-        "name": "error",
-        "info": "Error"
-      }, {
-        "name": "success",
-        "info": "Success"
-      }]
+      "callbacks": [
+        {
+          "name": "error",
+          "info": "Error"
+        },
+        {
+          "name": "success",
+          "info": "Success"
+        }
+      ]
     },
     {
       "name": "getSingleChangeset",
@@ -269,13 +272,16 @@
           "required": true
         }
       ],
-     "callbacks": [{
-        "name": "error",
-        "info": "Error"
-      }, {
-        "name": "success",
-        "info": "Success"
-      }]
+      "callbacks": [
+        {
+          "name": "error",
+          "info": "Error"
+        },
+        {
+          "name": "success",
+          "info": "Success"
+        }
+      ]
     },
     {
       "name": "searchMaps",
@@ -312,13 +318,16 @@
           "required": false
         }
       ],
-     "callbacks": [{
-        "name": "error",
-        "info": "Error"
-      }, {
-        "name": "success",
-        "info": "Success"
-      }]
+      "callbacks": [
+        {
+          "name": "error",
+          "info": "Error"
+        },
+        {
+          "name": "success",
+          "info": "Success"
+        }
+      ]
     },
     {
       "name": "getSingleMap",
@@ -337,13 +346,16 @@
           "required": true
         }
       ],
-     "callbacks": [{
-        "name": "error",
-        "info": "Error"
-      }, {
-        "name": "success",
-        "info": "Success"
-      }]
+      "callbacks": [
+        {
+          "name": "error",
+          "info": "Error"
+        },
+        {
+          "name": "success",
+          "info": "Success"
+        }
+      ]
     },
     {
       "name": "searchDetections",
@@ -380,13 +392,16 @@
           "required": false
         }
       ],
-     "callbacks": [{
-        "name": "error",
-        "info": "Error"
-      }, {
-        "name": "success",
-        "info": "Success"
-      }]
+      "callbacks": [
+        {
+          "name": "error",
+          "info": "Error"
+        },
+        {
+          "name": "success",
+          "info": "Success"
+        }
+      ]
     },
     {
       "name": "getSingleDetection",
@@ -405,13 +420,16 @@
           "required": true
         }
       ],
-     "callbacks": [{
-        "name": "error",
-        "info": "Error"
-      }, {
-        "name": "success",
-        "info": "Success"
-      }]
+      "callbacks": [
+        {
+          "name": "error",
+          "info": "Error"
+        },
+        {
+          "name": "success",
+          "info": "Success"
+        }
+      ]
     },
     {
       "name": "searchUsers",
@@ -448,13 +466,16 @@
           "required": false
         }
       ],
-     "callbacks": [{
-        "name": "error",
-        "info": "Error"
-      }, {
-        "name": "success",
-        "info": "Success"
-      }]
+      "callbacks": [
+        {
+          "name": "error",
+          "info": "Error"
+        },
+        {
+          "name": "success",
+          "info": "Success"
+        }
+      ]
     },
     {
       "name": "getSingleUser",
@@ -473,13 +494,16 @@
           "required": true
         }
       ],
-     "callbacks": [{
-        "name": "error",
-        "info": "Error"
-      }, {
-        "name": "success",
-        "info": "Success"
-      }]
+      "callbacks": [
+        {
+          "name": "error",
+          "info": "Error"
+        },
+        {
+          "name": "success",
+          "info": "Success"
+        }
+      ]
     },
     {
       "name": "getUserStatistics",
@@ -498,13 +522,16 @@
           "required": true
         }
       ],
-     "callbacks": [{
-        "name": "error",
-        "info": "Error"
-      }, {
-        "name": "success",
-        "info": "Success"
-      }]
+      "callbacks": [
+        {
+          "name": "error",
+          "info": "Error"
+        },
+        {
+          "name": "success",
+          "info": "Success"
+        }
+      ]
     }
   ]
 }

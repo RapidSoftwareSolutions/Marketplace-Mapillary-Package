@@ -14,19 +14,17 @@ Mapillary
 ## Mapillary.searchImages
 Search images
 
-| Field           | Type       | Description
-|-----------------|------------|----------
-| clientId        | credentials| Client Id obtained from Mapillary
-| closeToLongitude| String     | Longitude for the filter by a location that images are close to
-| closeToLatitude | String     | Latitude for the filter by a location that images are close to
-| lookAtLongitude | String     | Longitude for the filter by a location that images are taken in the direction of the specified point (and therefore that point is likely to be visible in the images)
-| lookAtLatitude  | String     | Latitude for the filter by a location that images are taken in the direction of the specified point (and therefore that point is likely to be visible in the images)
-| minBoundingBoxX | String     | Minimal X for filter by the bounding box
-| minBoundingBoxY | String     | Minimal Y for filter by the bounding box
-| maxBoundingBoxX | String     | Maximal X for filter by the bounding box
-| minBoundingBoxY | String     | Maximal Y for filter by the bounding box
-| radius          | String     | Filter images within the radius around the  closeTo location (default  100 meters).
-| userKeys        | String     | Filter images captured by users.
+| Field              | Type       | Description
+|--------------------|------------|----------
+| clientId           | credentials| Client Id obtained from Mapillary
+| closeToCoordinates | String     | Coma separated coordinates for the filter by a location that images are close to
+| lookAtCoordinates  | String     | Coma separated coordinates for the filter by a location that images are taken in the direction of the specified point (and therefore that point is likely to be visible in the images)
+| minBoundingBoxX    | String     | Minimal X for filter by the bounding box
+| minBoundingBoxY    | String     | Minimal Y for filter by the bounding box
+| maxBoundingBoxX    | String     | Maximal X for filter by the bounding box
+| minBoundingBoxY    | String     | Maximal Y for filter by the bounding box
+| radius             | String     | Filter images within the radius around the  closeTo location (default  100 meters).
+| userKeys           | String     | Filter images captured by users.
 
 ## Mapillary.getSingleImage
 Given an imageId, retrieve the image object.
