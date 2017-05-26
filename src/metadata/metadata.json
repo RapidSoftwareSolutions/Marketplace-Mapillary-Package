@@ -233,13 +233,22 @@
         },
         {
           "name": "states",
-          "type": "String",
+          "type": "Select",
+          "options": [
+            "pending",
+            "approved",
+            "rejected"
+          ],
           "info": "Changeset state. Possible values: pending, approved, rejected",
           "required": false
         },
         {
           "name": "types",
-          "type": "String",
+          "type": "Select",
+          "options": [
+            "location",
+            "deletion"
+          ],
           "info": "Changeset types. Possible values: location, deletion",
           "required": false
         }
